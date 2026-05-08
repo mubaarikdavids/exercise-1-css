@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Our Products</h1>
+    </header>
+
+    <main class="container">
+        <div class="product-card">
+            <h3 class="product-name">One Eyed Glassses</h3>
+            <img src="https://www.shutterstock.com/image-photo/funny-cyclopic-eye-glasses-single-600w-106596905.jpg" alt="">
+            <p class="product-price">R9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-name">Legless chair</h3>
+            <img src="https://m.media-amazon.com/images/I/613ZgUryEAL._AC_SL1024_.jpg" alt="">
+            <p class="product-price">R14.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-name">Spoole</h3>
+            <img src="https://thumbs.dreamstime.com/b/holey-spoon-isolated-blue-background-dieting-food-intake-control-punctured-as-symbol-diet-minimal-concept-110446239.jpg?w=768" alt="">
+            <p class="product-price">R19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-name">Banana Holder</h3>
+            <img src="https://bluebadgestyle.com/wp-content/uploads/2014/03/367195-pointless-inventions.jpg" alt="">
+            <p class="product-price">R24.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-name">Electric Hammer</h3>
+            <img src="https://www.technocrazed.com/wp-content/uploads/2013/07/italian-inventor-useless-inventions-from-useful-objects130.jpg" alt="">
+            <p class="product-price">R34.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-name">Flexable Fork</h3>
+            <img src="https://i.redd.it/oc319wz3mzr61.jpg" alt="">
+            <p class="product-price">R49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="popup" class="popup">
+        <p>Sexy Beast</p>
+        <button id="close-popup">Close</button>
+    </div>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+            });
+        });
+
+        document.getElementById('close-popup').addEventListener('click', () => {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
